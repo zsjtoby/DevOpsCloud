@@ -285,6 +285,7 @@ class TermLogRecorder(object):
             zf.writestr(filename, json.dumps(self.log))
             zf.close()
             record = TermLog.objects.create(logPath=filepath, logPWD=password, filename=filename,
+                                            log=json.dumps(self.log),
                                             history=json.dumps(self.CMD), timestamp=int(self.recoderStartTime))
             if self.user:
                 record.user.add(self.user)
@@ -327,7 +328,7 @@ class TermLogRecorder(object):
                 self.file = self._lists.get(filename=filename)
             else:
                 self.file = TermLog.objects.get(filename=filename)
-            if self.file.logPath == 'locale':
+            if len(self.file.log) > 0:
                 return self.file.log
             else:
                 try:
