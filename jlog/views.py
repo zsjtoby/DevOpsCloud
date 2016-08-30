@@ -266,7 +266,7 @@ class TermLogRecorder(object):
         # print self.commands
         # print self.CMD
         # print ">>>>>>>>>>>>>>>>"
-        self.log[str(time.time() - self.recoderStartTime)] = msg.decode('utf-8', 'replace')
+        # self.log[str(time.time() - self.recoderStartTime)] = msg.decode('utf-8', 'replace')
 
     def save(self, path=LOG_DIR):
         date = datetime.datetime.now().strftime('%Y%m%d')
@@ -279,21 +279,21 @@ class TermLogRecorder(object):
             filename = str(uuid.uuid4())
             filepath = os.path.join(path, 'tty', date, filename + '.zip')
         password = str(uuid.uuid4())
-        try:
-            zf = zipfile.ZipFile(filepath, 'w', zipfile.ZIP_DEFLATED)
-            zf.setpassword(password)
-            zf.writestr(filename, json.dumps(self.log))
-            zf.close()
-            record = TermLog.objects.create(logPath=filepath, logPWD=password, filename=filename,
-                                            history=json.dumps(self.CMD), timestamp=int(self.recoderStartTime))
-            if self.user:
-                record.user.add(self.user)
-        except:
-            record = TermLog.objects.create(logPath='locale', logPWD=password, log=json.dumps(self.log),
-                                            filename=filename, history=json.dumps(self.CMD),
-                                            timestamp=int(self.recoderStartTime))
-            if self.user:
-                record.user.add(self.user)
+#        try:
+#            zf = zipfile.ZipFile(filepath, 'w', zipfile.ZIP_DEFLATED)
+#            zf.setpassword(password)
+#            zf.writestr(filename, json.dumps(self.log))
+#            zf.close()
+#            record = TermLog.objects.create(logPath=filepath, logPWD=password, filename=filename,
+#                                            history=json.dumps(self.CMD), timestamp=int(self.recoderStartTime))
+#            if self.user:
+#                record.user.add(self.user)
+#        except:
+        record = TermLog.objects.create(logPath='locale', logPWD=password, log=json.dumps(self.log),
+                filename=filename, history=json.dumps(self.CMD),
+                timestamp=int(self.recoderStartTime))
+        if self.user:
+            record.user.add(self.user)
         try:
             del TermLogRecorder.loglist[str(self.id)]
         except KeyError:
