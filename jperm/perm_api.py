@@ -78,11 +78,11 @@ def get_group_user_perm(ob):
             # 将资产组中的资产添加到资产授权中
             for asset in asset_group_assets:
                 if perm_asset.get(asset):
-                    perm_asset[asset].get('role', set()).update(perm_asset_group[asset_group].get('role', set()))
-                    perm_asset[asset].get('rule', set()).update(perm_asset_group[asset_group].get('rule', set()))
+                    perm_asset[asset].get('role', set()).update(set(rule.role.all()))
+                    perm_asset[asset].get('rule', set()).update(set([rule]))
                 else:
-                    perm_asset[asset] = {'role': perm_asset_group[asset_group].get('role', set()),
-                                         'rule': perm_asset_group[asset_group].get('rule', set())}
+                    perm_asset[asset] = {'role': set(rule.role.all()),
+                                         'rule': set([rule])}
     return perm
 
 
