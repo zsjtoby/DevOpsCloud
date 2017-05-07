@@ -70,12 +70,12 @@ class PreSetup(object):
     def __init__(self):
         self.db_host = '127.0.0.1'
         self.db_port = 3306
-        self.db_user = 'jumpserver'
-        self.db_pass = '5Lov@wife'
+        self.db_user = 'info@geekfan.club'
+        self.db_pass = 'QWEasd123'
         self.db = 'jumpserver'
         self.mail_host = 'smtp.qq.com'
         self.mail_port = 25
-        self.mail_addr = 'hello@jumpserver.org'
+        self.mail_addr = 'info@geekfan.club'
         self.mail_pass = ''
         self.ip = ''
         self.key = ''.join(random.choice(string.ascii_lowercase + string.digits) \
