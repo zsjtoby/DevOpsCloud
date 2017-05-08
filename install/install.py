@@ -72,7 +72,7 @@ class PreSetup(object):
         self.db_port = 3306
         self.db_user = 'GeekCloud'
         self.db_pass = 'GeekCloud'
-        self.db = 'jumpserver'
+        self.db = 'GeekCloud'
         self.mail_host = 'smtp.exmail.qq.com'
         self.mail_port = 25
         self.mail_addr = 'info@geekfan.club'
