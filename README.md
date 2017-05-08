@@ -34,7 +34,7 @@ Web批量执行命令
 ![跳转](https://github.com/ibuler/static/raw/master/jumpserver3/command.jpg)
 
 
-###安装
+### 安装
 
 cd /opt
 
