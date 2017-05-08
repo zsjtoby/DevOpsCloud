@@ -1,5 +1,3 @@
-## 写在前面
- - 版本号变更 2.0 -> 0.2版本 3.0 -> 0.3版本
 
 #欢迎使用Jumpserver
 **Jumpserver** 是一款由python编写开源的跳板机(堡垒机)系统，实现了跳板机应有的功能。基于ssh协议来管理，客户端无需安装agent。
@@ -60,20 +58,6 @@ Web批量执行命令
 * 命令搜索
 * 实时监控
 * 批量上传下载
-
-### 其它
-
-[Jumpserver官网](http://www.jumpserver.org)
-
-[论坛](http://bbs.jumpserver.org)
-
-[demo站点](http://demo.jumpserver.org)
-
-交流群: 552054376
-
-### 团队
-
-![](https://github.com/ibuler/static/raw/master/jumpserver3/team.jpg)
 
 
 
