@@ -32,7 +32,7 @@ class Setup(object):
 
     def __init__(self):
         self.admin_user = 'admin'
-        self.admin_pass = '5Lov@wife'
+        self.admin_pass = 'QWEasd123'
 
     @staticmethod
     def _pull():
