@@ -288,7 +288,7 @@ class PreSetup(object):
             print
 
     def start(self):
-        color_print('请务必先查看wiki https://github.com/jumpserver/jumpserver/wiki')
+        color_print('欢迎使用极云监控系统')
         time.sleep(3)
         self.check_platform()
         self._rpm_repo()
