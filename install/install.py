@@ -73,7 +73,7 @@ class PreSetup(object):
         self.db_user = 'info@geekfan.club'
         self.db_pass = 'QWEasd123'
         self.db = 'jumpserver'
-        self.mail_host = 'smtp.qq.com'
+        self.mail_host = 'smtp.exmail.qq.com'
         self.mail_port = 25
         self.mail_addr = 'info@geekfan.club'
         self.mail_pass = ''
