@@ -37,9 +37,11 @@ Web批量执行命令
 ###安装
 
 cd /opt
+
 git clone https://github.com/Mr-Linus/geekcloud.git
 
 cd geekcloud/install
+
 python install.py
 
 ### 特点
