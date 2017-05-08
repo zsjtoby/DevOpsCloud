@@ -1,6 +1,6 @@
 
-#欢迎使用Jumpserver
-**Jumpserver** 是一款由python编写开源的跳板机(堡垒机)系统，实现了跳板机应有的功能。基于ssh协议来管理，客户端无需安装agent。
+#欢迎使用极云监控系统
+极云监控系统实现了跳板机应有的功能。基于ssh协议来管理，客户端无需安装agent。
 支持常见系统:
  1. CentOS, RedHat, Fedora, Amazon Linux
  2. Debian
