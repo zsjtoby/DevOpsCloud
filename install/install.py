@@ -207,7 +207,7 @@ class PreSetup(object):
                 smtp = SMTP(self.mail_host, port=self.mail_port, timeout=2)
             smtp.login(self.mail_addr, self.mail_pass)
             smtp.sendmail(self.mail_addr, (self.mail_addr, ),
-                          '''From:%s\r\nTo:%s\r\nSubject:Jumpserver Mail Test!\r\n\r\n  Mail test passed!\r\n''' %
+                          '''From:%s\r\nTo:%s\r\nSubject:GeekCloud Mail Test!\r\n\r\n  Mail test passed!\r\n''' %
                           (self.mail_addr, self.mail_addr))
             smtp.quit()
             return True
@@ -240,7 +240,7 @@ class PreSetup(object):
         bash('pip uninstall -y pycrypto')
         bash('rm -rf /usr/lib64/python2.6/site-packages/Crypto/')
         ret_code = bash('pip install -r requirements.txt')
-        self.check_bash_return(ret_code, "安装JumpServer 依赖的python库失败！")
+        self.check_bash_return(ret_code, "安装GeekCloud 依赖的python库失败！")
 
     def _input_ip(self):
         ip = raw_input('\n请输入您服务器的IP地址，用户浏览器可以访问 [%s]: ' % get_ip_addr()).strip()
@@ -254,9 +254,9 @@ class PreSetup(object):
             else:
                 db_host = raw_input('请输入数据库服务器IP [127.0.0.1]: ').strip()
                 db_port = raw_input('请输入数据库服务器端口 [3306]: ').strip()
-                db_user = raw_input('请输入数据库服务器用户 [jumpserver]: ').strip()
+                db_user = raw_input('请输入数据库服务器用户 [GeekCloud]: ').strip()
                 db_pass = raw_input('请输入数据库服务器密码: ').strip()
-                db = raw_input('请输入使用的数据库 [jumpserver]: ').strip()
+                db = raw_input('请输入使用的数据库 [GeekCloud]: ').strip()
 
                 if db_host: self.db_host = db_host
                 if db_port: self.db_port = db_port
