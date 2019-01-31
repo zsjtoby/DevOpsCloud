@@ -38,9 +38,9 @@ Web批量执行命令
 
 cd /opt
 
-git clone https://github.com/Mr-Linus/geekcloud.git
+git clone https://github.com/zsjtoby/DevOpsCloud
 
-cd geekcloud/install
+cd DevOpsCloud/install
 
 python install.py
 
@@ -57,7 +57,4 @@ python install.py
 * 命令搜索
 * 实时监控
 * 批量上传下载
-
-
-
-
+* 权限控制
