@@ -10,7 +10,7 @@ xlsxwriter==0.7.7
 xlrd==0.9.4
 django-bootstrap-form==3.2
 tornado==4.3
-ansible==1.9.4
+ansible==2.9.20
 pyinotify==0.9.6
 passlib==1.6.5
 argparse==1.4.0
