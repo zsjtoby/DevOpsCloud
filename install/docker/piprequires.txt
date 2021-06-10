@@ -1,5 +1,5 @@
 #sphinx-me==0.3
-django==1.6
+django==2.2.24
 #pycrypto==2.4.1
 paramiko==1.16.0
 ecdsa==0.13
